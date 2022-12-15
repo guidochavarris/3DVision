@@ -10,14 +10,18 @@ import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 
-const categories = [
-  "Laptop",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "SmartPhones",
+const categories  = [
+  "Juguetes",
+  "Moda",
+  "Hobby",
+  "Aprendizaje",
+  "Instrumentos",
+  "Arte",
+  "Artilugios",
+  "Familiar",
+  "Modelos",
+  "Juguetes y juegos",
+  "otros",
 ];
 
 const Products = ({ match }) => {
@@ -26,7 +30,7 @@ const Products = ({ match }) => {
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 25000]);
+  const [price, setPrice] = useState([0, 1000]);
   const [category, setCategory] = useState("");
 
   const [ratings, setRatings] = useState(0);
@@ -46,9 +50,11 @@ const Products = ({ match }) => {
     setCurrentPage(e);
   };
 
-  const priceHandler = (event, newPrice) => {
+  const priceHandler = async(event, newPrice) => {
     setPrice(newPrice);
   };
+
+
   let count = filteredProductsCount;
 
   useEffect(() => {
@@ -78,16 +84,25 @@ const Products = ({ match }) => {
 
           <div className="filterBox">
             <Typography>Price</Typography>
+
+
             <Slider
+              size="small"
               value={price}
-              onChange={priceHandler}
               valueLabelDisplay="auto"
+              aria-label="Small"
               aria-labelledby="range-slider"
               min={0}
-              max={25000}
+              max={1000}
+              osOnChangeTimerDelay = "3000"
+              onChange={priceHandler}
             />
 
-            <Typography>Categories</Typography>
+
+
+
+
+            <Typography>Categorias</Typography>
             <ul className="categoryBox">
               {categories.map((category) => (
                 <li

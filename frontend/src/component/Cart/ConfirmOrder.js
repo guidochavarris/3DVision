@@ -15,7 +15,7 @@ const ConfirmOrder = ({ history }) => {
     0
   );
 
-  const shippingCharges = subtotal > 1000 ? 0 : 200;
+  const shippingCharges = subtotal > 1000 ? 0 : 10;
 
   const tax = subtotal * 0.18;
 
@@ -43,7 +43,7 @@ const ConfirmOrder = ({ history }) => {
       <div className="confirmOrderPage">
         <div>
           <div className="confirmshippingArea">
-            <Typography>Shipping Info</Typography>
+            <Typography>Informacion de envio</Typography>
             <div className="confirmshippingAreaBox">
               <div>
                 <p>Name:</p>
@@ -60,7 +60,7 @@ const ConfirmOrder = ({ history }) => {
             </div>
           </div>
           <div className="confirmCartItems">
-            <Typography>Your Cart Items:</Typography>
+            <Typography>Carrito de compras:</Typography>
             <div className="confirmCartItemsContainer">
               {cartItems &&
                 cartItems.map((item) => (
@@ -70,8 +70,8 @@ const ConfirmOrder = ({ history }) => {
                       {item.name}
                     </Link>{" "}
                     <span>
-                      {item.quantity} X ₹{item.price} ={" "}
-                      <b>₹{item.price * item.quantity}</b>
+                      {item.quantity} X s/. {item.price} ={" "}
+                      <b>s/. {item.price * item.quantity}</b>
                     </span>
                   </div>
                 ))}
@@ -85,15 +85,15 @@ const ConfirmOrder = ({ history }) => {
             <div>
               <div>
                 <p>Subtotal:</p>
-                <span>₹{subtotal}</span>
+                <span>s/. {subtotal}</span>
               </div>
               <div>
-                <p>Shipping Charges:</p>
-                <span>₹{shippingCharges}</span>
+                <p>Envio:</p>
+                <span>s/. {shippingCharges}</span>
               </div>
               <div>
-                <p>GST:</p>
-                <span>₹{tax}</span>
+                <p>IGV:</p>
+                <span>s/. {tax}</span>
               </div>
             </div>
 
@@ -101,10 +101,10 @@ const ConfirmOrder = ({ history }) => {
               <p>
                 <b>Total:</b>
               </p>
-              <span>₹{totalPrice}</span>
+              <span>s/. {totalPrice}</span>
             </div>
 
-            <button onClick={proceedToPayment}>Proceed To Payment</button>
+            <button onClick={proceedToPayment}>Pagar</button>
           </div>
         </div>
       </div>

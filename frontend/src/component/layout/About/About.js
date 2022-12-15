@@ -1,12 +1,9 @@
 import React from "react";
 import "./aboutSection.css";
-import { Button, Typography, Avatar } from "@material-ui/core";
+import {  Typography, Avatar } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
 const About = () => {
-  const visitInstagram = () => {
-    window.location = "https://instagram.com/meabhisingh";
-  };
   return (
     <div className="aboutSection">
       <div></div>
@@ -18,16 +15,15 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://res.cloudinary.com/da1bubhns/image/upload/v1671053031/DALL_E_2022-12-14_16.17.50_q3qy0g.png"
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
-            <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
-            </Button>
+            <Typography>Gabriel Cordova Begazo,
+                        Luis Rivera Gonzales,
+                        Guido lucana Lopez
+            </Typography>
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              Programadores de 3DVision
             </span>
           </div>
           <div className="aboutSectionContainer2">

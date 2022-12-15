@@ -34,7 +34,7 @@ const OrderDetails = ({ match }) => {
               <Typography component="h1">
                 Order #{order && order._id}
               </Typography>
-              <Typography>Shipping Info</Typography>
+              <Typography>Informacion de envio</Typography>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p>Name:</p>
@@ -105,8 +105,8 @@ const OrderDetails = ({ match }) => {
                         {item.name}
                       </Link>{" "}
                       <span>
-                        {item.quantity} X ₹{item.price} ={" "}
-                        <b>₹{item.price * item.quantity}</b>
+                        {item.quantity} X s/. {item.price} ={" "}
+                        <b>s/. {item.price * item.quantity}</b>
                       </span>
                     </div>
                   ))}

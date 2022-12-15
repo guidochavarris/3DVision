@@ -74,20 +74,20 @@ const Dashboard = () => {
         <div className="dashboardSummary">
           <div>
             <p>
-              Total Amount <br /> ₹{totalAmount}
+              Total vendido <br /> s/.  {totalAmount}
             </p>
           </div>
           <div className="dashboardSummaryBox2">
             <Link to="/admin/products">
-              <p>Product</p>
+              <p>Productos</p>
               <p>{products && products.length}</p>
             </Link>
             <Link to="/admin/orders">
-              <p>Orders</p>
+              <p>Ordenes</p>
               <p>{orders && orders.length}</p>
             </Link>
             <Link to="/admin/users">
-              <p>Users</p>
+              <p>Usuarios</p>
               <p>{users && users.length}</p>
             </Link>
           </div>

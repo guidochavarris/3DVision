@@ -78,7 +78,7 @@ const Cart = ({ history }) => {
                       +
                     </button>
                   </div>
-                  <p className="cartSubtotal">{`₹${
+                  <p className="cartSubtotal">{`$ ${
                     item.price * item.quantity
                   }`}</p>
                 </div>
@@ -87,8 +87,8 @@ const Cart = ({ history }) => {
             <div className="cartGrossProfit">
               <div></div>
               <div className="cartGrossProfitBox">
-                <p>Gross Total</p>
-                <p>{`₹${cartItems.reduce(
+                <p>Total</p>
+                <p>{`s/. ${cartItems.reduce(
                   (acc, item) => acc + item.quantity * item.price,
                   0
                 )}`}</p>

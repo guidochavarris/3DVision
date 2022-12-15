@@ -69,7 +69,7 @@ const ProcessOrder = ({ history, match }) => {
             >
               <div>
                 <div className="confirmshippingArea">
-                  <Typography>Shipping Info</Typography>
+                  <Typography>Informacion de envio</Typography>
                   <div className="orderDetailsContainerBox">
                     <div>
                       <p>Name:</p>
@@ -140,8 +140,8 @@ const ProcessOrder = ({ history, match }) => {
                             {item.name}
                           </Link>{" "}
                           <span>
-                            {item.quantity} X ₹{item.price} ={" "}
-                            <b>₹{item.price * item.quantity}</b>
+                            {item.quantity} X {item.price} ={" "}
+                            <b>s/. {item.price * item.quantity}</b>
                           </span>
                         </div>
                       ))}

@@ -134,7 +134,7 @@ const ProductDetails = ({ match }) => {
                 </span>
               </div>
               <div className="detailsBlock-3">
-                <h1>{`₹${product.price}`}</h1>
+                <h1>{`s/. ${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
                     <button onClick={decreaseQuantity}>-</button>
@@ -145,7 +145,7 @@ const ProductDetails = ({ match }) => {
                     disabled={product.Stock < 1 ? true : false}
                     onClick={addToCartHandler}
                   >
-                    Add to Cart
+                    Añadir al carrito
                   </button>
                 </div>
 
@@ -158,11 +158,11 @@ const ProductDetails = ({ match }) => {
               </div>
 
               <div className="detailsBlock-4">
-                Description : <p>{product.description}</p>
+                Descripcion : <p>{product.description}</p>
               </div>
 
               <button onClick={submitReviewToggle} className="submitReview">
-                Submit Review
+                Subir review
               </button>
             </div>
           </div>
