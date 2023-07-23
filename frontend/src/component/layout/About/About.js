@@ -18,24 +18,23 @@ const About = () => {
               src="https://res.cloudinary.com/da1bubhns/image/upload/v1671053031/DALL_E_2022-12-14_16.17.50_q3qy0g.png"
               alt="Founder"
             />
-            <Typography>Gabriel Cordova Begazo,
-                        Luis Rivera Gonzales,
+            <Typography>
                         Guido lucana Lopez
             </Typography>
             <span>
-              Programadores de 3DVision
+              Programador
             </span>
           </div>
           <div className="aboutSectionContainer2">
             <Typography component="h2">Our Brands</Typography>
             <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
+              href=""
               target="blank"
             >
               <YouTubeIcon className="youtubeSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/meabhisingh" target="blank">
+            <a href="" target="blank">
               <InstagramIcon className="instagramSvgIcon" />
             </a>
           </div>
